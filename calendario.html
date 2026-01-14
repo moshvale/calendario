@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Azteca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fondo con calendario azteca -->
+    <div class="background-container"></div>
+    
+    <!-- Grecas decorativas -->
+    <div class="grecas-top"></div>
+    <div class="grecas-bottom"></div>
+    
+    <!-- Encabezado -->
+    <header>
+        <h1>Calendario Azteca</h1>
+        <p class="subtitle">Simulador completo del calendario azteca con Xiuhpohualli (365 días) y Tonalpohualli (260 días)</p>
+        <p> <h6>*El algoritmo utiliza la correlación de Alfonso Caso, estableciendo el 12 de febrero como inicio del año azteca,</h6></p>
+        <p> <h6>y calcula las fechas mediante operaciones aritméticas modulares para mantener la continuidad de los ciclos.</h6></p>
+    </header>
+    
+    <!-- Contenido principal -->
+    <div class="container">
+        <!-- Panel de entrada -->
+        <div class="input-panel">
+            <div class="input-group">
+                <label for="fecha">Selecciona una fecha:</label>
+                <input type="date" id="fecha">
+                <button class="btn" id="calcular">Calcular Fecha Azteca</button>
+                <button class="btn" id="hoy">Fecha de Hoy</button>
+            </div>
+        </div>
+        
+        <!-- Indicador de carga -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Calculando fecha azteca...</p>
+        </div>
+        
+        <!-- Mensaje de error -->
+        <div class="error" id="error"></div>
+        
+        <!-- Resultados -->
+        <div class="results" id="resultados">
+            <!-- Información de la fecha gregoriana -->
+            <div class="result-section">
+                <h2 class="result-title">📅 Fecha Gregoriana</h2>
+                <div class="result-content">
+                    <p id="fecha-gregoriana"></p>
+                </div>
+            </div>
+            
+            <!-- Año Azteca -->
+            <div class="result-section">
+                <h2 class="result-title">🌄 Año Azteca</h2>
+                <div class="result-content">
+                    <p id="año-azteca"></p>
+                </div>
+            </div>
+            
+            <!-- Xiuhpohualli -->
+            <div class="result-section">
+                <h2 class="result-title">☀️ Xiuhpohualli (Calendario Solar)</h2>
+                <div class="result-content">
+                    <p id="xiuhpohualli"></p>
+                </div>
+            </div>
+            
+            <!-- Tonalpohualli -->
+            <div class="result-section">
+                <h2 class="result-title">🌙 Tonalpohualli (Calendario Sagrado)</h2>
+                <div class="result-content">
+                    <p id="tonalpohualli"></p>
+                    
+                    <div class="signo-info" id="info-signo">
+                        <!-- Información del signo se cargará aquí dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Banner dinámico de signos del Tonalpohualli -->
+        <div class="signos-banner" id="signos-banner-container">
+            <!-- El contenido se generará dinámicamente con JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
